@@ -30,6 +30,7 @@ void Behaviors::Run(void)
 {
     switch (drive_state)
     {
+<<<<<<< HEAD
         case IDLE:
             // if next step recieved from barbie
                 // change state to next step
@@ -43,6 +44,19 @@ void Behaviors::Run(void)
             if (tasks.HulaHoop()) drive_state = IDLE;
             break;
     }
+=======
+    case IDLE:
+        // if next step recieved from barbie
+            // change state to next step
+            
+    case DRIVE:
+        inverse.DriveToTarget(/*barbie data*/ 0,0,0); // BLOCKING
+        break;
+    
+    case HULA_HOOP:
+        if (tasks.HulaHoop()) robot_state = IDLE;
+        break;
+>>>>>>> 503bd95d6054a85bfb0adeaaae59dc1d465e96b8
 
     switch (buzzer_state)
     {
