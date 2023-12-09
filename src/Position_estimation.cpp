@@ -26,11 +26,6 @@ void Position::Stop(void)
     theta = 0;
 }
 
-Position::pose_data Position::ReadPose(void)
-{
-    return {x,y,theta};
-}
-
 String Position::PoseToString()
 {
     return (String)(x) + "\t" + (String)(y) + "\t" + (String)(theta);

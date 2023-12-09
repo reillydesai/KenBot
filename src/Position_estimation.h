@@ -10,14 +10,8 @@ class Position{
         const float l = 0.142875; //meters
         
     public:
-        struct pose_data {
-            float X;
-            float Y;
-            float THETA;
-        };
         void Init(void);
         void UpdatePose(float,float);
-        pose_data ReadPose(void);
         String PoseToString();
         void Stop(void);
         float GetX();

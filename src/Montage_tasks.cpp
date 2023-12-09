@@ -3,27 +3,37 @@
 #include  "Speed_controller.h"
 #include "Montage_tasks.h"
 
-Romi32U4Motors motors;
-Encoder motorEncoder;
 SpeedController controller;
 
-void Init(void){
+void Montage::Init(void)
+{
 
 }
 
-bool HulaHoop(){
+bool Montage::HulaHoop()
+{
     // if less than 3 turns return false
-    // if more than 3 turns call stop & return true
+    // if more than 3 turns controller.stop stop & return true
 }
 
-void HulaHoopStop(){
-    controller.Stop();
+bool Montage::Buzzer()
+{
+    if (i < 0 /*num rows in song*/) {
+        if (millis() - time_prev < song[i][1])
+        {
+            /*play note at song[i][0]*/ 
+        } else {
+            BuzzerStop();
+            i++;
+            time_prev = millis();
+        }
+        return false;
+    } else {
+        return true;
+    }
 }
 
-bool Buzzer(){
-
-}
-
-void BuzzerStop(){
+void Montage::BuzzerStop()
+{
 
 }

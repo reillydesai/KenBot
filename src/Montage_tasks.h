@@ -7,9 +7,10 @@ class Montage{
     private:
         // buzzer pin
         // PWM consts for notes
-        // array for notes
-
-        void HulaHoopStop(void);
+        long/*?*/ song[8][2] = {0}; // 2D array for notes in order with times
+        int i = 0;
+        unsigned long time_prev;
+        
         void BuzzerStop(void);
 
     public:
