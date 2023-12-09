@@ -6,6 +6,7 @@
 class Position{
     private:
         float x, y, theta;
+        float theta_prev;
         unsigned long time_prev, time_now; //time for forward kinematics
         unsigned long turn_t_prev, turn_t_now; //time for turn detection
         const unsigned long interval; //interval for turn detection

@@ -19,15 +19,8 @@ void Position::Init(void)
 
 void Position::Stop(void)
 {
-<<<<<<< HEAD
-    time_prev = millis();
-    x = 0; 
-    y = 0;
-    theta = 0;
-=======
     time_prev, turn_t_prev = millis();
     x, y, theta = 0;
->>>>>>> 503bd95d6054a85bfb0adeaaae59dc1d465e96b8
 }
 
 String Position::PoseToString()
